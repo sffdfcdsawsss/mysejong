@@ -91,10 +91,23 @@ input::-webkit-search-results-decoration {
   src: url("../font/CantataOne/CantataOne-Regular.ttf") format("truetype");
   font-family: "CantataOne-Regular";
 }
-html, body {
+.group {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: 0.8s;
+}
+
+.group.mem {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+html,
+body {
   height: 100%;
 }
-html.off, body.off {
+html.off,
+body.off {
   overflow: hidden;
 }
 
@@ -214,11 +227,110 @@ header .header_wrap .gnb_intro > hr {
   transform: translate(32px, 10px);
   background-color: #000;
 }
-header .header_wrap .gnb_intro > p {
-  font-size: 0.875rem;
-  line-height: 1.5;
-  text-align: right;
+
+header .header-search-container {
+  width: 100%;
+  background-color: #f3f3f5;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  height: 677px;
+  padding: 0 10%;
+  transition: 0.3s ease;
+  transform: translateY(-100%);
+}
+
+header .header-search-container.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: 0.3s ease;
+}
+
+header .header-search-container .hd-search-close {
+  width: 40px;
+  height: 40px;
+  background-color: #9988FF;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  background-image: url(../imgs/reservation/arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(-90deg);
+}
+
+header .header-search-container .hd-search-close:hover {
+  cursor: pointer;
+}
+
+header .header-search-container .hd-search-input {
+  width: 100%;
+  max-width: 1066px;
+  margin: 0 auto;
+  padding-top: 123px;
+  padding-bottom: 126px;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+header .header-search-container .hd-search-input img {
+  position: absolute;
+  width: 29px;
+  right: 25px;
+  top: 146px;
+}
+
+header .header-search-container .hd-search-input img:hover {
+  cursor: pointer;
+}
+
+header .header-search-container .hd-search-input input {
+  width: 100%;
+  height: 75px;
+  border-radius: 46px;
+  outline-style: none;
+  border: none;
+  font-size: 20px;
+  padding-left: 56px;
+  background-color: #fff;
+}
+
+header .header-search-container .hd-search-input input::placeholder {
+  color: rgba(154, 136, 255, 0.3843137255);
+  font-size: 20px;
+}
+
+header .header-search-container .hd-search-title {
+  text-align: center;
+}
+
+header .header-search-container .hd-search-title p {
+  font-size: 18px;
   color: #818181;
+}
+
+header .header-search-container .hd-search-title p:nth-of-type(1) {
+  font-size: 38px;
+  font-family: "NotoSansKR-Bold";
+  margin-bottom: 16px;
+  color: black;
+}
+
+header .header-search-container .hd-search-foot {
+  text-align: right;
+  right: 0;
+}
+
+header .header-search-container .hd-search-foot p:nth-of-type(1) {
+  font-size: 14px;
+}
+
+header .header-search-container .hd-search-foot p:nth-of-type(2) {
+  font-family: "CantataOne-Regular";
+  font-size: 3.2rem;
 }
 
 .gnb_mobile {
@@ -336,12 +448,12 @@ footer .footer_inner .footer_contents .info .right .right_img {
   justify-content: flex-end;
 }
 footer .footer_inner .footer_contents .info .right .right_img p {
-  width: 45%;
+  width: 20%;
   display: inline-block;
   text-align: right;
 }
 footer .footer_inner .footer_contents .info .right .right_img p img {
-  width: 50%;
+  width: 35px;
 }
 
 aside {
@@ -352,9 +464,10 @@ aside {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 100%;
-  background-color: #9988ff;
+  background-color: #9988FF;
   box-shadow: 0px 4px 11px rgba(85, 85, 85, 0.445);
   cursor: pointer;
+  opacity: 0;
 }
 aside a {
   display: block;
@@ -698,6 +811,98 @@ aside a {
   header .gnb_btn .btn_search {
     width: 16px !important;
   }
+  header .header-search-container {
+    width: 100%;
+    background-color: #f3f3f5;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    height: 100vh;
+    padding: 0 10% 20% 10%;
+    transition: 0.3s ease;
+    transform: translateY(-100%);
+  }
+  header .header-search-container.active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 0.3s ease;
+  }
+  header .header-search-container .hd-search-close {
+    width: 40px;
+    height: 40px;
+    background-color: #9988FF;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    background-image: url(../imgs/reservation/arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: rotate(-90deg);
+  }
+  header .header-search-container .hd-search-close:hover {
+    cursor: pointer;
+  }
+  header .header-search-container .hd-search-input {
+    width: 100%;
+    max-width: 1066px;
+    margin: 0 auto;
+    padding-top: 250px;
+    padding-bottom: 90px;
+    border: none;
+    outline: none;
+    position: relative;
+  }
+  header .header-search-container .hd-search-input img {
+    position: absolute;
+    width: 29px;
+    right: 25px;
+    top: 270px;
+  }
+  header .header-search-container .hd-search-input img:hover {
+    cursor: pointer;
+  }
+  header .header-search-container .hd-search-input input {
+    width: 100%;
+    height: 75px;
+    border-radius: 46px;
+    outline-style: none;
+    border: none;
+    font-size: 20px;
+    padding-left: 56px;
+    background-color: #fff;
+  }
+  header .header-search-container .hd-search-input input::placeholder {
+    color: rgba(154, 136, 255, 0.3843137255);
+    font-size: 20px;
+  }
+  header .header-search-container .hd-search-title {
+    text-align: center;
+  }
+  header .header-search-container .hd-search-title p {
+    font-size: 18px;
+    color: #818181;
+  }
+  header .header-search-container .hd-search-title p:nth-of-type(1) {
+    font-size: 2rem;
+    font-family: "NotoSansKR-Bold";
+    margin-bottom: 16px;
+    color: black;
+  }
+  header .header-search-container .hd-search-foot {
+    text-align: right;
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+  }
+  header .header-search-container .hd-search-foot p:nth-of-type(1) {
+    font-size: 14px;
+  }
+  header .header-search-container .hd-search-foot p:nth-of-type(2) {
+    font-family: "CantataOne-Regular";
+    font-size: 3rem;
+  }
   aside {
     position: sticky;
     left: 80%;
@@ -869,6 +1074,15 @@ aside a {
 main.performance {
   width: 100%;
 }
+main.performance .group {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: 0.8s;
+}
+main.performance .group.mem {
+  opacity: 1;
+  transform: translateY(0%);
+}
 main.performance .intro {
   display: none;
 }
@@ -898,7 +1112,7 @@ main.performance .visual .fade_slider .slick-list .slick-track li img {
 }
 main.performance .visual .recommend_slider {
   top: -100%;
-  transform: translateY(calc((650px - (100vw - 280px - 60px) / 5 * 1.42 - 60px) / 2));
+  transform: translateY(calc((650px - (100vw - 280px - 22.2222222222vw) / 5 * 1.42 - 60px) / 2));
   z-index: 1;
 }
 main.performance .visual .recommend_slider .slick-track {
@@ -906,7 +1120,7 @@ main.performance .visual .recommend_slider .slick-track {
 }
 main.performance .visual .recommend_slider .slick-track li {
   position: relative;
-  width: calc((100vw - 280px - 60px) / 5);
+  width: calc((100vw - 280px - 22.2222222222vw) / 5);
   margin-left: 100px;
   transition: transform 0.5s;
   overflow: hidden;
@@ -971,7 +1185,8 @@ main.performance .visual .recommend_slider .slick-track li figure figcaption a {
 }
 main.performance .sorting {
   width: 100%;
-  padding: 63px 30px 160px;
+  max-width: 1920px;
+  padding: 63px 11.1111111111% 160px;
   margin: 0 auto;
 }
 main.performance .sorting .btn_wrap {

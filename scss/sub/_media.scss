@@ -293,26 +293,24 @@
             }
 
             .popularity {
-                width: 100%;
+                width: 80%;
                 max-width: 1500px;
                 margin: 0 auto;
-                margin-top: 100px;
                 display: block !important;
                 align-items: center;
                 flex-direction: column;
                 justify-content: left;
+                padding-left: 0px;
+                overflow: hidden;
+                padding-bottom: 15%;
                 position: relative;
-                padding-left: 80px;
-
                 .popularity-back {
-                    width: 1920px;
-                    font-size: 130px;
+                    width: 100%;
+                    font-size: 7.4rem;
                     opacity: 0.5;
-                    left: 0;
+                    left: 40%;
                     text-align: center;
-                    position: absolute;
-                    bottom: 2%;
-
+                    transform: rotate(270deg);
                     .text-loop {
                         font-weight: 900;
                         white-space: nowrap;
@@ -333,8 +331,8 @@
                 }
 
                 .popularity-text {
-                    margin-top: 190px;
-
+                    margin-top: 20%;
+                    margin-right: 0px;
                     .popularity-deco {
                         width: 73px;
                         height: 2px;
@@ -408,8 +406,6 @@
                             align-items: center;
                             margin-top: 30px;
                             position: absolute;
-                            bottom: -61px;
-                            margin-left: 80px;
 
                             img {
                                 width: 19px;
@@ -457,7 +453,7 @@
                             }
 
                             .next {
-                                margin-left: 60px;
+                                margin-left: 30px;
 
                                 img {
                                     transform: translateY(-4px);
@@ -474,9 +470,10 @@
 
                 .popularity-content {
                     overflow-x: hidden;
-                    width: 440px;
-                    margin-left: 79px;
-
+                    margin-left: 0px;
+                    width: 60%;
+                    margin: 0 auto;
+                    margin-top: 10%;
                     .swiper-con {
                         display: flex;
                         padding-top: 150px;
@@ -563,19 +560,19 @@
 
             .Sejong {
                 width: 100%;
-                margin-top: 200px;
+                margin-top: 0px;
                 background-color: #f3f3f5;
-                padding: 182px 0px 176px 10px;
+                padding: 20% 0px 176px 10px;
 
                 .Sejong-inner {
-                    width: 100%;
+                    width: 80%;
                     max-width: 1500px;
                     margin: 0 auto;
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
                     flex-direction: column-reverse;
                     position: relative;
+                    align-items: flex-end;
 
                     .Sejong-box {
                         display: flex;
@@ -689,7 +686,7 @@
                         }
                     }
                     .Sejong-box-mobile {
-                        width: 80%;
+                        width: 100%;
                         display: block !important;
 
                         .swiper {
@@ -703,7 +700,7 @@
                                     width: 100% !important;
                                     max-width: 1280px;
                                     margin: 0 auto;
-                                    padding: 30px;
+                                    padding: 0px;
 
                                     img {
                                         width: 100%;
@@ -714,34 +711,33 @@
                                         width: 60.875vw;
                                         max-width: 66.875vw;
                                         margin: 0 auto;
-                                        top: 40%;
+                                        top: 54%;
                                         left: 6.9844vw;
-                                        bottom: 70px;
+                                        bottom: 50px;
                                         background-color: #ffffff80;
                                         border-radius: 20px;
+                                        padding: 4.5%;
 
                                         .mobile-box-text {
-                                            position: absolute;
-                                            top: 8.5938vw;
-                                            left: 6.25vw;
 
                                             h1 {
-                                                font-size: 2.1875vw;
+                                                font-size: 2.3875vw;
                                                 margin-bottom: 8px;
                                             }
 
                                             p {
-                                                font-size: 1.5625vw;
-                                                margin-bottom: 4.2969vw;
+                                                font-size: 1.8625vw;
+                                                margin-bottom: 3.0969vw;
                                             }
 
                                             button {
-                                                width: 13.9812vw;
-                                                min-width: 150px;
-                                                height: 60px;
+                                                width: 13.4812vw;
+                                                height: 20%;
                                                 background-color: white;
                                                 border-radius: 46px;
-
+                                                position: absolute;
+                                                bottom: 28px;
+                                                box-shadow:#81818138 1px 1px 15px;
                                                 &:hover {
                                                     cursor: pointer;
                                                 }
@@ -765,7 +761,6 @@
                     }
 
                     .Sejong-text {
-                        transform: translateX(243px);
                         margin-bottom: 104px;
 
                         .Sejong-title {
@@ -876,7 +871,7 @@
 
             .event {
                 overflow: hidden;
-                height: 130vh !important;
+                height: 135vh !important;
                 width: 100%;
                 max-width: 1500px;
                 margin: 0 auto;
@@ -886,18 +881,22 @@
                 padding-bottom: 150px;
                 flex-direction: column;
                 .back{
-                    width: 574px;
-                    height: 574px;
+                    width: 520px;
+                    height: 520px;
                     background-color: black;
                     border-radius: 500px;
                     z-index: -2;
                     position: absolute;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%, 0%);
                     
                 }
 
                 .event-cotent {
-                    min-width: 620px;
+                    width: 100%;
                     margin-top: 650px;
+                    transform: translateX(0px);
 
                     .event-deco-ani {
                         font-size: 150px;
@@ -915,8 +914,8 @@
                         animation: none !important;
 
                         .spans {
-                            p {
-                                transform: translateY(-420%) !important;
+                            p { font-size: 7rem;
+                                transform: translateY(-557%) !important;
                             }
                         }
                     }
@@ -927,12 +926,13 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    transform: translateY(-67%) translateX(5%);
-
+                    transform: translateY(-63%) translateX(0%);
+                    width: 90%;
+                    margin: 0 auto;
+                    height: 100vh;
                     img {
                         width: 264px;
                         height: 109px;
-                        border-radius: 30px;
                     }
 
                     .event-box1 {
@@ -1120,8 +1120,7 @@
                     }
 
                     .event-boxs {
-                        max-width: 620px;
-
+                        width: 100%;
                         .box-text {
                             p {
                                 letter-spacing: -2px;
@@ -1131,7 +1130,7 @@
 
                         .box-sumnail {
                         }
-
+up mem
                         &.active {
                             width: 100%;
                             /* 너비를 100%로 늘림 */
@@ -1148,15 +1147,13 @@
                     }
 
                     .box-contents {
-                        max-width: 620px;
+                        width: 80%;
                     }
                 }
 
                 .event-text {
-                    transform: translateX(30%) translateY(-20%);
-                    text-align: left;
-                    margin-bottom: 50px;
-                    margin-left: 53px;
+                    width: 80%;
+                    margin: 0 auto;
 
                     .event-deco {
                         width: 73px;
@@ -1246,15 +1243,15 @@
                 max-width: 1500px;
                 margin: 0 auto;
                 margin-top: 100px;
-                margin-bottom: 0px !important;
                 display: block !important;
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: column;
                 padding-left: 84px;
                 padding-right: 85px;
-
+                margin-bottom: 10%;
                 .coronation-text {
+                    margin-bottom: 10%;
                     .coronation-deco {
                         width: 73px;
                         height: 2px;
@@ -1360,10 +1357,11 @@
                         ul {
                             display: flex;
                             flex-direction: column;
-
+                            margin-left: 0%;
                             li {
                                 width: 100% !important;
-                                margin-right: 170px;
+                                margin-right: 50px;
+                                margin-bottom:0%;
 
                                 .mobile-col-boxs {
                                     width: 100%;
@@ -1372,6 +1370,7 @@
 
                             &:nth-of-type(1) {
                                 margin-bottom: 51px;
+                                margin: 0;
                             }
                         }
 
@@ -1394,7 +1393,7 @@
                         }
 
                         .board-box1 {
-                            width: 498px;
+                            width: 100%;
 
                             &::after {
                                 content: "";
@@ -1510,7 +1509,7 @@
                                     width: 100% !important;
                                     max-width: 640px;
                                     margin: 0 auto;
-                                    padding: 30px;
+                                    padding: 0px;
 
                                     img {
                                         width: 100%;
@@ -1624,10 +1623,8 @@
 
                 .coronation-board {
                     .board-box {
-                        max-width: 534px;
 
                         ul {
-                            max-width: 530px;
                             margin-left: 0 !important;
 
                             li {
@@ -1648,7 +1645,6 @@
 
             .popularity {
                 max-width: 640px !important;
-
                 .popularity-content {
                     .swiper-con {
                         width: 100%;

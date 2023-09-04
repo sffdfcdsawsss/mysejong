@@ -1106,25 +1106,25 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     transform: translateY(-3px);
   }
   main .main-inner .popularity {
-    width: 100%;
+    width: 80%;
     max-width: 1500px;
     margin: 0 auto;
-    margin-top: 100px;
     display: block !important;
     align-items: center;
     flex-direction: column;
     justify-content: left;
+    padding-left: 0px;
+    overflow: hidden;
+    padding-bottom: 15%;
     position: relative;
-    padding-left: 80px;
   }
   main .main-inner .popularity .popularity-back {
-    width: 1920px;
-    font-size: 130px;
+    width: 100%;
+    font-size: 7.4rem;
     opacity: 0.5;
-    left: 0;
+    left: 40%;
     text-align: center;
-    position: absolute;
-    bottom: 2%;
+    transform: rotate(270deg);
   }
   main .main-inner .popularity .popularity-back .text-loop {
     font-weight: 900;
@@ -1142,7 +1142,8 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     }
   }
   main .main-inner .popularity .popularity-text {
-    margin-top: 190px;
+    margin-top: 20%;
+    margin-right: 0px;
   }
   main .main-inner .popularity .popularity-text .popularity-deco {
     width: 73px;
@@ -1200,8 +1201,6 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     align-items: center;
     margin-top: 30px;
     position: absolute;
-    bottom: -61px;
-    margin-left: 80px;
   }
   main .main-inner .popularity .popularity-text .popularity-title .slide-btn img {
     width: 19px;
@@ -1241,7 +1240,7 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     cursor: pointer;
   }
   main .main-inner .popularity .popularity-text .popularity-title .slide-btn .next {
-    margin-left: 60px;
+    margin-left: 30px;
   }
   main .main-inner .popularity .popularity-text .popularity-title .slide-btn .next img {
     transform: translateY(-4px);
@@ -1252,8 +1251,10 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
   }
   main .main-inner .popularity .popularity-content {
     overflow-x: hidden;
-    width: 440px;
-    margin-left: 79px;
+    margin-left: 0px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10%;
   }
   main .main-inner .popularity .popularity-content .swiper-con {
     display: flex;
@@ -1323,19 +1324,19 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
   }
   main .main-inner .Sejong {
     width: 100%;
-    margin-top: 200px;
+    margin-top: 0px;
     background-color: #f3f3f5;
-    padding: 182px 0px 176px 10px;
+    padding: 20% 0px 176px 10px;
   }
   main .main-inner .Sejong .Sejong-inner {
-    width: 100%;
+    width: 80%;
     max-width: 1500px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-direction: column-reverse;
     position: relative;
+    align-items: flex-end;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-box {
     display: flex;
@@ -1428,7 +1429,7 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     min-width: 454px !important;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-box-mobile {
-    width: 80%;
+    width: 100%;
     display: block !important;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-box-mobile .swiper {
@@ -1442,7 +1443,7 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     width: 100% !important;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 0px;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-box-mobile .swiper .swiper-wrapper .swiper-slide img {
     width: 100%;
@@ -1452,31 +1453,29 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     width: 60.875vw;
     max-width: 66.875vw;
     margin: 0 auto;
-    top: 40%;
+    top: 54%;
     left: 6.9844vw;
-    bottom: 70px;
+    bottom: 50px;
     background-color: rgba(255, 255, 255, 0.5019607843);
     border-radius: 20px;
-  }
-  main .main-inner .Sejong .Sejong-inner .Sejong-box-mobile .swiper .swiper-wrapper .swiper-slide .mobile-swiper-box .mobile-box-text {
-    position: absolute;
-    top: 8.5938vw;
-    left: 6.25vw;
+    padding: 4.5%;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-box-mobile .swiper .swiper-wrapper .swiper-slide .mobile-swiper-box .mobile-box-text h1 {
-    font-size: 2.1875vw;
+    font-size: 2.3875vw;
     margin-bottom: 8px;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-box-mobile .swiper .swiper-wrapper .swiper-slide .mobile-swiper-box .mobile-box-text p {
-    font-size: 1.5625vw;
-    margin-bottom: 4.2969vw;
+    font-size: 1.8625vw;
+    margin-bottom: 3.0969vw;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-box-mobile .swiper .swiper-wrapper .swiper-slide .mobile-swiper-box .mobile-box-text button {
-    width: 13.9812vw;
-    min-width: 150px;
-    height: 60px;
+    width: 13.4812vw;
+    height: 20%;
     background-color: white;
     border-radius: 46px;
+    position: absolute;
+    bottom: 28px;
+    box-shadow: rgba(129, 129, 129, 0.2196078431) 1px 1px 15px;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-box-mobile .swiper .swiper-wrapper .swiper-slide .mobile-swiper-box .mobile-box-text button:hover {
     cursor: pointer;
@@ -1488,7 +1487,6 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     margin-bottom: 0px !important;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-text {
-    transform: translateX(243px);
     margin-bottom: 104px;
     text-align: right;
     position: relative;
@@ -1580,7 +1578,7 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
   }
   main .main-inner .event {
     overflow: hidden;
-    height: 130vh !important;
+    height: 135vh !important;
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
@@ -1591,16 +1589,20 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     flex-direction: column;
   }
   main .main-inner .event .back {
-    width: 574px;
-    height: 574px;
+    width: 520px;
+    height: 520px;
     background-color: black;
     border-radius: 500px;
     z-index: -2;
     position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
   main .main-inner .event .event-cotent {
-    min-width: 620px;
+    width: 100%;
     margin-top: 650px;
+    transform: translateX(0px);
   }
   main .main-inner .event .event-cotent .event-deco-ani {
     font-size: 150px;
@@ -1618,19 +1620,22 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     animation: none !important;
   }
   main .main-inner .event .event-cotent .event-deco-ani .spans p {
-    transform: translateY(-420%) !important;
+    font-size: 7rem;
+    transform: translateY(-557%) !important;
   }
   main .main-inner .event .event-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateY(-67%) translateX(5%);
+    transform: translateY(-63%) translateX(0%);
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
   }
   main .main-inner .event .event-box img {
     width: 264px;
     height: 109px;
-    border-radius: 30px;
   }
   main .main-inner .event .event-box .event-box1 {
     width: 806px;
@@ -1777,31 +1782,29 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     }
   }
   main .main-inner .event .event-box .event-boxs {
-    max-width: 620px;
+    width: 100%;
   }
   main .main-inner .event .event-box .event-boxs .box-text p {
     letter-spacing: -2px;
     font-size: 1.2rem;
   }
-  main .main-inner .event .event-box .event-boxs.active {
+  up mem main .main-inner .event .event-box .event-boxs.active {
     width: 100%;
     /* 너비를 100%로 늘림 */
     opacity: 1;
   }
-  main .main-inner .event .event-box .event-boxs.active .box-text {
+  up mem main .main-inner .event .event-box .event-boxs.active .box-text {
     opacity: 1;
   }
-  main .main-inner .event .event-box .event-boxs.active .box-sumnail {
+  up mem main .main-inner .event .event-box .event-boxs.active .box-sumnail {
     opacity: 1;
   }
   main .main-inner .event .event-box .box-contents {
-    max-width: 620px;
+    width: 80%;
   }
   main .main-inner .event .event-text {
-    transform: translateX(30%) translateY(-20%);
-    text-align: left;
-    margin-bottom: 50px;
-    margin-left: 53px;
+    width: 80%;
+    margin: 0 auto;
   }
   main .main-inner .event .event-text .event-deco {
     width: 73px;
@@ -1876,13 +1879,16 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     max-width: 1500px;
     margin: 0 auto;
     margin-top: 100px;
-    margin-bottom: 0px !important;
     display: block !important;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     padding-left: 84px;
     padding-right: 85px;
+    margin-bottom: 10%;
+  }
+  main .main-inner .coronation .coronation-text {
+    margin-bottom: 10%;
   }
   main .main-inner .coronation .coronation-text .coronation-deco {
     width: 73px;
@@ -1971,16 +1977,19 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
   main .main-inner .coronation .coronation-board .board-box ul {
     display: flex;
     flex-direction: column;
+    margin-left: 0%;
   }
   main .main-inner .coronation .coronation-board .board-box ul li {
     width: 100% !important;
-    margin-right: 170px;
+    margin-right: 50px;
+    margin-bottom: 0%;
   }
   main .main-inner .coronation .coronation-board .board-box ul li .mobile-col-boxs {
     width: 100%;
   }
   main .main-inner .coronation .coronation-board .board-box ul:nth-of-type(1) {
     margin-bottom: 51px;
+    margin: 0;
   }
   main .main-inner .coronation .coronation-board .board-box .board-yeal {
     font-size: 16px;
@@ -1998,7 +2007,7 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     font-family: "NotoSansKR-Regula";
   }
   main .main-inner .coronation .coronation-board .board-box .board-box1 {
-    width: 498px;
+    width: 100%;
   }
   main .main-inner .coronation .coronation-board .board-box .board-box1::after {
     content: "";
@@ -2075,7 +2084,7 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
     width: 100% !important;
     max-width: 640px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 0px;
   }
   main .main-inner .Sejong .Sejong-inner .Sejong-box-mobile .swiper .swiper-wrapper .swiper-slide img {
     width: 100%;
@@ -2161,11 +2170,7 @@ main .main-inner .coronation .coronation-board .board-box .board-sub {
   main .main-inner .coronation .coronation-btn {
     transform: translateY(-70px);
   }
-  main .main-inner .coronation .coronation-board .board-box {
-    max-width: 534px;
-  }
   main .main-inner .coronation .coronation-board .board-box ul {
-    max-width: 530px;
     margin-left: 0 !important;
   }
   main .main-inner .coronation .coronation-board .board-box ul li {
