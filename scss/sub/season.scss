@@ -1,0 +1,204 @@
+@import url('../css/basic.css');
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .group{
+        opacity: 0;
+        transform: translateY(30%);
+        transition: 0.8s;
+    }
+    .group.mem{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    .bg{
+        width:100%;
+        height:650px;
+        background:url('../imgs/season/Season_banner.png');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h2{
+            color: white;
+            font-size:3rem;
+            font-family: "NotoSansKR-Medium";
+        }
+        hr{
+            width: 4.5625rem;
+            display: none;
+            margin: 1rem;
+        }
+        p{
+            color: #818181;
+            font-size: 1.25rem;
+            display: none;
+        }
+    }
+
+    .Season_content{
+        width:100%;
+        ul{
+            display: flex;
+            margin: 10rem 10rem 5rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li{
+                border-radius: 1.875rem;
+                border: 0px solid black;
+                box-shadow: 1px 2px 20px 1px rgba(136, 136, 136, 0.5137254902);
+                width: 20%;
+                height:19.6875rem;
+                overflow: hidden;
+                transition: 1s;
+                .bgimg{
+                    height: 11.25rem;
+                    border-bottom: 0px solid black;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .txtbox{
+                    padding: 0px 2.5rem 30px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: .5rem;
+                    gap: 1.25rem;
+                    position: relative;
+                    b{
+                        z-index: 0;
+                        font-size: 1.3rem;
+                        margin-top: 1rem;
+                    }
+                    p{
+                        font-size: 0.625rem;
+                        color: #818181;
+                    }
+                }
+                .txtbox::before{
+                    content: "";
+                    position: absolute;
+                    border-left: 0.1875rem solid #9988FF;
+                    height: 1.5625rem;
+                    top: 1.5rem;
+                    left: 8%;
+                    color:#9988FF;
+                }
+                
+            }
+            li:hover{
+                transform: scale(105%);
+                cursor: pointer;
+            }
+        }
+
+        .column3{
+            li{
+                &:nth-of-type(4){
+
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .page_turn{
+        cursor: pointer;
+        text-align: center;
+        letter-spacing:10px;
+        margin: 5rem;
+        a{
+            span{
+                display: inline-block;
+                transform: translateX(6px);
+                height: 11px
+            }
+        }
+    }
+}
+@media screen and (max-width:1280px){
+    
+    main{
+        width: 100%;
+        .bg{
+            height: 401px;
+            width: 100%;
+            background-color: white;
+            color: black;
+            background-image: url('');
+            h2{
+                color: black;
+            }
+            hr{
+                display: block;
+            }
+            p{
+                display: block;
+            }
+        }
+        .Season_content{
+            width: 100%;
+            ul{
+                margin: 0rem 5rem;
+                li{
+                    margin-top: 5rem;
+                    width: 45%;
+                    .bgimg{
+                        img{
+
+                        }
+                    }
+                    .txtbox{
+                        b{
+
+                        }
+                        p{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:640px){
+    
+    main{
+        
+        .Season_content{
+            width: 100%;
+            ul{
+                margin: 0rem 5rem;
+                li{
+                    margin-top: 5rem;
+                    width: 100%;
+                    .bgimg{
+                        img{
+
+                        }
+                    }
+                    .txtbox{
+                        b{
+
+                        }
+                        p{
+
+                        }
+                    }
+                }
+            }
+            .column3{
+                li{
+                    &:nth-of-type(4){
+    
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

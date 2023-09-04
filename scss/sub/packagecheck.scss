@@ -1,0 +1,305 @@
+@import url('../css/basic.css');
+main{
+    width: 1000px;
+    padding: 20px 111px ; 
+    margin: 0 auto;
+    .group{
+        opacity: 0;
+        transform: translateY(30%);
+        transition: 0.8s;
+    }
+    .group.mem{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    .title{
+        padding-bottom: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2{
+            position: relative;
+            font-size: 42px;
+            p{
+                z-index: -1;
+                // width: 271.39px;
+                border-radius: 30px;
+                bottom: 0px;
+                background-color: #9988FF;
+                height:20px;
+                position: absolute;
+                transition: 1s;
+                animation: 1s textbar_left forwards;
+            }
+            p::after{
+                content: "";
+                position: absolute; 
+                // transform: translate(280px);
+                width: 20px;
+                height: 20px;
+                border-radius: 90px;
+                background-color: #9988FF;
+                transition: 1s;
+                animation: 2.5s cubic-bezier(.43,.49,1,1.27)textbar_left_ball forwards ;
+            }
+            @keyframes textbar_left {
+                0%{
+                    width: 0px;
+                }
+                100%{
+                    width: 271.39px;
+                }
+            }
+            @keyframes textbar_left_ball {
+                0%{
+                    transform: translate(0px);
+                }
+                100%{
+                    transform: translate(280px);
+                }
+            }
+        }
+
+    }
+    .title::after{
+        content: "";
+        display: block;
+        background: url('../imgs/common/icon/X.svg') no-repeat;
+        width: 20px;
+        height: 20px;
+    }
+    .buy_ticket{
+        ul{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            li{
+                font-size: 18px;
+                border: 2px solid #C0C0C0;
+                border-radius: 30px;
+                
+                width: 45%;
+                height: 54px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 51px;
+                a{
+                    color: #C0C0C0;
+                }
+                
+            }
+            .color{
+                color: #9988FF;
+                border-color: #9988FF;
+            }
+            
+        }
+    }
+    .ex{
+        p{font-size: 12px;color: #818181;margin-bottom: 1rem;}
+        hr{
+            margin-bottom: 62px;
+        }
+    }
+    .date{
+        width: 777px;
+        border-radius: 30px;
+        box-shadow: 1px 5px 5px 5px  #88888883;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        padding: 15px 30px;
+        p{color: #818181; font-size: 16px;}
+        span{color: #818181;}
+        button{
+            width: 43.07px;
+            height: 34.2px;
+            background-color: #9988FF;
+            border: 0px;
+            border-radius: 30px;
+            img{}
+            cursor: pointer;
+        }
+        input{
+        }
+    }
+    .history{
+        margin-top: 47px;
+        .history_list{
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            li,p{
+                color: #818181;
+                font-size: 14px;
+            }
+            li{
+                cursor: pointer;
+            }
+            .color{
+                color: #9988FF;
+                border-color: #9988FF;
+            }
+            
+        }
+        .history_list_detail{
+            width: 100%;
+            border-radius: 30px 30px 0 0;
+            overflow: hidden;
+            thead{
+                overflow: hidden;
+                background-color: #9a88ff52;
+                width: 100%;
+                border-collapse: collapse;
+                
+                tr{
+                    
+                    border-radius: 30px;
+                    th{
+                        padding: 12px;
+                        font-size: 12px;
+                        text-align: center;   
+                        position: relative;
+                    }
+                    th::after{
+                        content: "|";
+                        position: absolute;
+                        right: 0;
+
+                        color: #818181;
+                    }
+                    th:last-child::after{
+                        content:none;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        padding: 1rem;
+                        font-size: 12px;
+                        text-align: center;
+                        button{
+                            background-color: #C0C0C0;
+                            font-size: 10px;
+                            color: white;
+                            padding: 4.88px 9.19px;
+                            border-radius: 30px;
+                            border: 1px solid white;
+                            box-shadow: 1px 1px 1px 1px  #88888883;
+                        }
+                        button:hover{
+                            background-color: #9988FF;
+                        }
+                    }
+                }
+            }
+        }
+        hr{
+            width: 100%;;
+            border:1px solid #9a88ff52;
+        }
+    }
+    .page_turn{
+        text-align: center;
+        letter-spacing:10px;
+        margin: 5rem;
+        a{
+            span{
+                display: inline-block;
+                transform: translateX(6px);
+                height: 11px
+            }
+        }
+    }
+    .page_turn.active{
+        display:none;
+    }
+}
+@media (max-width:650px){
+    main{
+        max-width: 100%;
+        margin: 3rem;
+        padding: 0;
+        .title{
+            h2{
+                font-size: 1.9rem;
+                p{
+                    width: 11.875rem;
+                    height: 10px;
+                }
+                p::after{
+                    transform: translate(200px);
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+        }
+        .buy_ticket{
+            
+            ul{
+                gap: 1%;
+                justify-content: normal;
+                width:100%;
+                li{
+                    width: 42%;
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .ex{
+            p{
+                width: 90%;
+                margin-bottom: 1rem;
+                font-size: .7rem;
+            }
+            hr{
+                width: 85%;
+            }
+        }
+        .date{
+            display: none;
+        }
+        .history{
+            .history_list_detail{
+                border-radius: 0px;
+                width: 85%;
+                thead{
+                    background-color: white;
+                    
+                    border-top: #9a88ff52 2px solid;
+                    tr{
+                        th:nth-of-type(1){
+                            display: none;
+                        }
+                        th:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+                tbody{
+                    border-top: #9a88ff52 2px solid;
+                    tr{
+                        td:nth-of-type(1){
+                            /* display: none; */
+                        }
+                        td:nth-of-type(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+            hr{
+                width: 85%;
+            }
+        }
+        .page_turn{
+            width: 60%;
+        }
+    }
+}

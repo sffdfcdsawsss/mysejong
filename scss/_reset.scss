@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: keep-all;
+    font-family: "NotoSansKR-Regular";
+}
+
+body,p,b,figure,h2,h3,h4,h5,h6,div
+{margin: 0px;}
+
+body{width: 100%;}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img,video{
+    vertical-align: middle;
+}
+    
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+button,input{
+    border: none;
+    outline-style: none;
+    background-color: transparent;
+}
+button{cursor:pointer}
+table{
+    border-collapse: collapse;
+}
+
+input::-ms-clear,
+input::-ms-reveal{
+    display:none;width:0;height:0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
+
+
+@font-face {
+  src: url("../font/NotoSansKR/NotoSansKR-Black.otf") format("truetype");
+  font-family: "NotoSansKR-Black";
+  font-weight: 900;
+}
+@font-face {
+  src: url("../font/NotoSansKR/NotoSansKR-Bold.otf") format("truetype");
+  font-family: "NotoSansKR-Bold";
+  font-weight: 700;
+}
+@font-face {
+  src: url("../font/NotoSansKR/NotoSansKR-Light.otf") format("truetype");
+  font-family: "NotoSansKR-Light";
+  font-weight: 300;
+}
+@font-face {
+  src: url("../font/NotoSansKR/NotoSansKR-Medium.otf") format("truetype");
+  font-family: "NotoSansKR-Medium";
+  font-weight: 500;
+}
+@font-face {
+  src: url("../font/NotoSansKR/NotoSansKR-Regular.otf") format("truetype");
+  font-family: "NotoSansKR-Regular";
+  font-weight: 400;
+}
+@font-face {
+  src: url("../font/NotoSansKR/NotoSansKR-Thin.otf") format("truetype");
+  font-family: "NotoSansKR-Thin";
+  font-weight: 100;
+}
+@font-face {
+  src: url("../font/CantataOne/CantataOne-Regular.ttf") format("truetype");
+  font-family: "CantataOne-Regular";
+}
+

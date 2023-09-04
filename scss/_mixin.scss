@@ -1,0 +1,7 @@
+@mixin space_between{display:flex; justify-content:space-between;}
+@mixin align_x_center{display:flex; justify-content:center;}
+@mixin align_y_center{display:flex; align-items:center;}
+@mixin align_xy_center{display:flex; justify-content:center; align-items:center;}
+@mixin pos_x_center{position:absolute; left:50%; transform:translateX(-50%);}
+@mixin pos_y_center{position:absolute; top:50%; transform:translateY(-50%);}
+@mixin pos_xy_center{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}

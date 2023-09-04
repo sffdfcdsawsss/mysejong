@@ -1,0 +1,812 @@
+main {
+  font-family: "NotoSansKR-Regular";
+  width: 100%;
+}
+main .group {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: 0.8s;
+}
+main .group.mem {
+  opacity: 1;
+  transform: translateY(0%);
+}
+main .title {
+  width: 100%;
+  height: 650px;
+  background: url(../imgs/banner/title1\ \(8\).png);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  /*         @keyframes title{
+              0%{transform: translateY(30%);opacity: 0;}
+              100%{transform: translateY(0%);}
+          }
+          @keyframes title_p{
+              0%{transform: translateY(100%); opacity: 0;}
+              100%{transform: translateY(0%);}
+          } */
+}
+main .title h2 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #ffffff;
+  padding-top: 4%;
+  font-weight: 400;
+  font-family: "NotoSansKR-Medium";
+}
+main .title .m_title {
+  display: none;
+}
+main section .box {
+  margin-top: 5%;
+  font-weight: 500;
+  width: 100%;
+  height: 145px;
+  background-color: #F3F3F5;
+  display: grid;
+  place-items: center;
+}
+main section .box .container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1%;
+}
+main section .box .container .noice {
+  width: 640px;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 18px;
+  overflow: hidden;
+}
+main section .box .container .noice img {
+  width: 35px;
+  height: 35px;
+  margin: 0 5%;
+}
+main section .box .container .noice .notice_slide {
+  position: relative;
+  height: 59%;
+  width: 97%;
+  overflow: hidden;
+}
+main section .box .container .noice .notice_slide p {
+  position: absolute;
+  font-family: "NotoSansKR-Medium";
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 1s ease-in-out;
+}
+main section .box .container .noice .notice_slide.active p {
+  transform: translateY(0);
+}
+main section .box .container .box_btn {
+  width: 180px;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #9988FF;
+  border-radius: 20px;
+  background-color: white;
+  font-family: "NotoSansKR-Medium";
+  font-size: 16px;
+}
+main section .box .container .box_btn a {
+  color: #9988FF;
+  margin-top: 11px;
+}
+main section .box .container .rental_search {
+  width: 40%;
+  height: 51px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  background-color: white;
+}
+main section .box .container .rental_search input {
+  margin: 0 3% 0 5%;
+  width: 80%;
+  font-size: 1rem;
+}
+main section .box .container .rental_search input::placeholder {
+  color: rgba(154, 136, 255, 0.6980392157);
+}
+main section .box .container .rental_search button {
+  margin: 10px 15px;
+  background: url(../imgs/rental/header\ \(3\).png) no-repeat;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+}
+main section .line_menu {
+  color: #818181;
+  padding-top: 4%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  font-family: "NotoSansKR-Medium";
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #C0C0C0;
+}
+main section .line_menu .content .menu_item {
+  margin-left: 60px;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 15px;
+}
+main section .line_menu .content .menu_item .menu_circle {
+  display: none;
+  background-color: #9988FF;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 10px 10px 0 0;
+  transition: all 0.3s ease-in-out;
+}
+main section .line_menu .content .menu_item .line_point {
+  position: absolute;
+  border: solid 2px;
+  height: 3px;
+  width: 100%;
+  color: #9988FF;
+  transform: translateY(13px);
+  left: 7%;
+  display: none;
+}
+main section .line_menu .content .menu_item .line_point_2 {
+  display: none;
+}
+main section .line_menu .content .menu_item .line_point_3 {
+  display: none;
+}
+main section .line_menu .line {
+  color: #C0C0C0;
+  margin-top: 1%;
+  border: solid 2px;
+  height: 3px;
+  width: 100%;
+  display: none;
+}
+main section .menu_item.active {
+  cursor: pointer;
+  color: #000;
+  border-bottom: 4px solid #9988ff;
+}
+main section .table_radius {
+  margin: 100px auto;
+  width: 80%;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  border-bottom-left-radius: "0";
+  border-bottom-left-radius: "0";
+}
+main section .table_radius table {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  border-style: hidden;
+  border-bottom: 1px #c0c0c0;
+}
+main section .table_radius table thead {
+  font-family: "NotoSansKR-Medium";
+  background-color: rgba(154, 136, 255, 0.1921568627);
+  border-radius: 10px;
+}
+main section .table_radius table thead tr th {
+  position: relative;
+}
+main section .table_radius table thead tr th a {
+  color: #c0c0c0;
+  position: absolute;
+  right: 0;
+}
+main section .table_radius table thead tr th:nth-child(1) {
+  width: 8%;
+}
+main section .table_radius table thead tr th:nth-child(2) {
+  width: 45%;
+}
+main section .table_radius table thead tr th:nth-child(3) {
+  width: 20%;
+}
+main section .table_radius table thead tr th:nth-child(4) {
+  width: 15%;
+}
+main section .table_radius table thead tr th:nth-child(5) {
+  width: 10%;
+}
+main section .table_radius table tbody {
+  color: #818181;
+}
+main section .table_radius table tbody tr td:nth-of-type(2) {
+  text-align: start;
+  padding-left: 25px;
+}
+main section .table_radius table tbody tr td:nth-of-type(2) a {
+  color: #818181;
+}
+main section th, main section td {
+  border: 1px solid #c0c0c0;
+  border-width: 1px 0;
+  padding: 18px 20px;
+  text-align: center;
+}
+main section th img, main section td img {
+  width: 65px;
+}
+main section .ongoing {
+  display: none;
+}
+main section .ended {
+  display: none;
+}
+main .page {
+  display: flex;
+  justify-content: center;
+  margin: 6% 0 5% 0;
+}
+main .page span {
+  margin: 0px 5px;
+}
+main .page span img {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+}
+main .page p a {
+  color: #818181;
+  margin: 0 5px;
+}
+main .page p a.active {
+  font-family: "NotoSansKR-Medium";
+  color: #9988FF;
+}
+
+@media (max-width: 640px) {
+  main {
+    width: 100%;
+  }
+  main .title {
+    width: 100%;
+    height: 541px;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+  }
+  main .title h2 {
+    font-size: 40px;
+    font-family: "NotoSansKR-Medium";
+    color: #000000;
+    margin: 7% 0 5% 0;
+    font-weight: 400;
+    font-weight: bold;
+  }
+  main .title .m_title {
+    display: block;
+    overflow: hidden;
+  }
+  main .title .m_title hr {
+    width: 73px;
+    border-bottom: 3px solid;
+    margin: 0 auto;
+  }
+  main .title .m_title p {
+    font-size: 1rem;
+    color: #818181;
+    margin-top: 12%;
+    transform: translateY(100%);
+    animation: title_p 0.5s 0.5s forwards;
+    overflow: hidden;
+  }
+  @keyframes title_p {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  main section .box {
+    margin-top: 5%;
+    font-family: "NotoSansKR-Medium";
+    width: 100%;
+    height: 486px;
+    background-color: #F3F3F5;
+    display: flex;
+  }
+  main section .box .container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+  }
+  main section .box .container .noice {
+    width: 100%;
+    height: 161px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 1.2rem;
+    overflow: hidden;
+  }
+  main section .box .container .noice img {
+    width: 35px;
+    height: 35px;
+    margin: 3% 0 2% 0;
+  }
+  main section .box .container .noice .notice_slide {
+    overflow: hidden;
+    font-size: 1.2rem;
+    width: 80%;
+    text-align: center;
+    height: 50%;
+    padding: 1%;
+  }
+  main section .box .container .noice .notice_slide p {
+    margin-bottom: 7%;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    transform: translateY(0px);
+  }
+  main section .box .container .box_btn {
+    width: 180px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #9988FF;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 1.1rem;
+    margin: 7% 0;
+  }
+  main section .box .container .box_btn a {
+    color: #9988FF;
+    margin-top: 11px;
+  }
+  main section .box .container .rental_search {
+    width: 100%;
+    height: 51px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: white;
+  }
+  main section .box .container .rental_search input {
+    margin: 0 6%;
+    width: 80%;
+    font-size: 3vw;
+  }
+  main section .box .container .rental_search input::placeholder {
+    color: rgba(154, 136, 255, 0.6980392157);
+  }
+  main section .box .container .rental_search button {
+    margin: 13px 6%;
+    background: url(../imgs/rental/header\ \(3\).png) no-repeat;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+  }
+  main section .line_menu {
+    color: #818181;
+    padding-top: 4%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    font-family: "NotoSansKR-Medium";
+    font-size: 3vw;
+  }
+  main section .line_menu .content {
+    width: 100%;
+    text-align: center;
+  }
+  main section .line_menu .content .menu_item {
+    margin-left: 6%;
+    cursor: pointer;
+    position: relative;
+  }
+  main section .line_menu .content .menu_item .menu_circle {
+    display: none;
+    background-color: #9988FF;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    margin: 8px 8px 0 0;
+  }
+  main section .line_menu .content .menu_item .line_point {
+    position: absolute;
+    border: solid 2px;
+    height: 3px;
+    width: 100%;
+    color: #9988FF;
+    transform: translateY(13px);
+    left: 7%;
+  }
+  main section .line_menu .content .menu_item .line_point_2 {
+    display: none;
+  }
+  main section .line_menu .content .menu_item .line_point_3 {
+    display: none;
+  }
+  main section .line_menu .line {
+    color: #C0C0C0;
+    margin-top: 3.5%;
+    border: solid 2px;
+    height: 3px;
+    width: 100%;
+  }
+  main section .table_radius {
+    margin: 50px auto;
+    width: 80%;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+  }
+  main section .table_radius table {
+    line-height: 22px;
+    letter-spacing: -2%;
+    font-size: 0.8rem;
+    width: 100%;
+    height: 100%;
+    border-style: hidden;
+    border-bottom: 1px #c0c0c0;
+  }
+  main section .table_radius table thead {
+    background-color: rgba(154, 136, 255, 0.1921568627);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-family: "NotoSansKR-Light";
+  }
+  main section .table_radius table thead tr th {
+    position: relative;
+  }
+  main section .table_radius table thead tr th a {
+    color: #c0c0c0;
+    position: absolute;
+    right: 0;
+  }
+  main section .table_radius table thead tr th:nth-child(1) {
+    width: 10%;
+    display: none;
+  }
+  main section .table_radius table thead tr th:nth-child(2) {
+    width: 34%;
+  }
+  main section .table_radius table thead tr th:nth-child(3) {
+    width: 23%;
+  }
+  main section .table_radius table thead tr th:nth-child(4) {
+    width: 25%;
+  }
+  main section .table_radius table thead tr th:nth-child(5) {
+    width: 15%;
+  }
+  main section .table_radius table tbody tr td:nth-of-type(2) {
+    text-align: start;
+    padding-left: 2%;
+  }
+  main section .table_radius table tbody tr td:nth-of-type(1) {
+    display: none;
+  }
+  main section th, main section td {
+    border: 1px solid #c0c0c0;
+    border-width: 1px 0;
+    padding: 3% 2%;
+    text-align: center;
+  }
+  main section th img, main section td img {
+    width: 80%;
+  }
+  main .page {
+    display: flex;
+    justify-content: center;
+    margin: 6% 0 10% 0;
+  }
+  main .page span {
+    margin: 0px 5px;
+  }
+  main .page span img {
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+  }
+  main .page p a {
+    color: #818181;
+    margin: 0 5px;
+  }
+  main .page p a.active {
+    font-family: "NotoSansKR-Medium";
+    color: #9988FF;
+  }
+}
+@media (min-width: 641px) and (max-width: 1280px) {
+  main {
+    font-family: "NotoSansKR";
+    width: 100%;
+  }
+  main .title {
+    width: 100%;
+    height: 541px;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    overflow: hidden;
+  }
+  main .title h2 {
+    font-size: 40px;
+    font-family: "NotoSansKR-Medium";
+    color: #000000;
+    margin: 3% 0;
+    font-weight: 400;
+    font-weight: bold;
+  }
+  main .title .m_title {
+    display: block;
+    overflow: hidden;
+  }
+  main .title .m_title hr {
+    width: 73px;
+    border-bottom: 3px solid;
+    margin: 0 auto;
+  }
+  main .title .m_title p {
+    font-size: 20px;
+    color: #818181;
+    margin-top: 12%;
+    transform: translateY(100%);
+    animation: title_p 0.5s 0.5s forwards;
+    overflow: hidden;
+  }
+  @keyframes title_p {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  main section .box {
+    margin-top: 5%;
+    font-family: "NotoSansKR-Medium";
+    width: 100%;
+    height: 486px;
+    background-color: #F3F3F5;
+    display: flex;
+  }
+  main section .box .container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+  }
+  main section .box .container .noice {
+    width: 100%;
+    height: 161px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 18px;
+    overflow: hidden;
+  }
+  main section .box .container .noice img {
+    width: 35px;
+    height: 35px;
+    margin: 3% 0 1% 0;
+  }
+  main section .box .container .noice .notice_slide {
+    overflow: hidden;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  main section .box .container .noice .notice_slide p {
+    margin-bottom: 7%;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    transform: translateY(0px);
+  }
+  main section .box .container .noice .notice_slide p a {
+    display: block;
+  }
+  main section .box .container .box_btn {
+    width: 180px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #9988FF;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 18px;
+    margin: 5% 0;
+  }
+  main section .box .container .box_btn a {
+    color: #9988FF;
+    margin-top: 11px;
+  }
+  main section .box .container .rental_search {
+    width: 100%;
+    height: 51px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: white;
+  }
+  main section .box .container .rental_search input {
+    margin: 0 30px;
+    width: 80%;
+    font-size: 18px;
+  }
+  main section .box .container .rental_search input::placeholder {
+    color: rgba(154, 136, 255, 0.6980392157);
+  }
+  main section .box .container .rental_search button {
+    margin: 10px 25px;
+    background: url(../imgs/rental/header\ \(3\).png) no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+  }
+  main section .line_menu {
+    color: #818181;
+    padding-top: 4%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    font-family: "NotoSansKR-Medium";
+    font-size: 1.1rem;
+  }
+  main section .line_menu .content {
+    width: 100%;
+    text-align: center;
+  }
+  main section .line_menu .content .menu_item {
+    margin-left: 6%;
+    cursor: pointer;
+    position: relative;
+  }
+  main section .line_menu .content .menu_item .menu_circle {
+    display: none;
+    background-color: #9988FF;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 8px 8px 0 0;
+  }
+  main section .line_menu .content .menu_item .line_point {
+    position: absolute;
+    border: solid 2px;
+    height: 3px;
+    width: 100%;
+    color: #9988FF;
+    transform: translateY(20px);
+    left: 7%;
+  }
+  main section .line_menu .content .menu_item .line_point_2 {
+    display: none;
+  }
+  main section .line_menu .content .menu_item .line_point_3 {
+    display: none;
+  }
+  main section .line_menu .line {
+    color: #C0C0C0;
+    margin-top: 3.5%;
+    border: solid 2px;
+    height: 3px;
+    width: 100%;
+  }
+  main section .table_radius {
+    margin: 100px auto;
+    width: 80%;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+  }
+  main section .table_radius table {
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    border-style: hidden;
+    border-bottom: 1px #c0c0c0;
+  }
+  main section .table_radius table thead {
+    background-color: rgba(154, 136, 255, 0.1921568627);
+    border-radius: 10px;
+    font-family: "NotoSansKR-Light";
+  }
+  main section .table_radius table thead tr th {
+    position: relative;
+  }
+  main section .table_radius table thead tr th a {
+    color: #c0c0c0;
+    position: absolute;
+    right: 0;
+  }
+  main section .table_radius table thead tr th:nth-child(1) {
+    width: 13%;
+  }
+  main section .table_radius table thead tr th:nth-child(2) {
+    width: 45%;
+  }
+  main section .table_radius table thead tr th:nth-child(3) {
+    width: 20%;
+  }
+  main section .table_radius table thead tr th:nth-child(4) {
+    width: 15%;
+  }
+  main section .table_radius table thead tr th:nth-child(5) {
+    width: 7%;
+  }
+  main section .table_radius table tbody tr td:nth-of-type(2) {
+    text-align: start;
+    padding-left: 15px;
+  }
+  main section th, main section td {
+    border: 1px solid #c0c0c0;
+    border-width: 1px 0;
+    padding: 18px 9px;
+    text-align: center;
+  }
+  main section th img, main section td img {
+    width: 55px;
+  }
+  main .page {
+    display: flex;
+    justify-content: center;
+    margin: 6% 0 10% 0;
+  }
+  main .page span {
+    margin: 0px 5px;
+  }
+  main .page span img {
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+  }
+  main .page p a {
+    color: #818181;
+    margin: 0 5px;
+  }
+  main .page p a.active {
+    font-family: "NotoSansKR-Medium";
+    color: #9988FF;
+  }
+}/*# sourceMappingURL=rental.css.map */

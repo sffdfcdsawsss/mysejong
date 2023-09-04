@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../imgs/location/favicon_180.png">
+    <title>오시는길</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="shortcut icon" href="../favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="../favicon-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/location.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script defer src="../js/common.js"></script>
+    <script type="text/javascript"
+        src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=9c6443b890ffa77aee076523b98b43ec&libraries=services"></script>
+    <script defer src="../js/location.js"></script>
+</head>
+</head>
+
+<body>
+    <main>
+        <div class="title">
+            <figure>
+                <p><img src="../imgs/location/title1 (2).png" alt="banner"></p>
+                <figcaption class="group">
+                    <b>오시는길</b>
+                    <span></span>
+                    <p>세종문화회관의 위치 정보를 알려드립니다.</p>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="guide">
+            <h3 class="group">공연장 위치안내</h3>
+            <div class="guide_contents">
+                <div class="guide_txt">
+                    <div class="text">
+                        <div class="information group">
+                            <b><span></span>information</b>
+                            <div class="description">
+                                <p>서울특별시 종로구 세종대로 175
+                                    (세종로) 세종문화회관 (우)03172
+                                </p>
+                                <span>TEl. 02-399-1000 (오전 9시 ~ 오후 8시)</span>
+                            </div>
+                        </div>
+                        <div class="notice group">
+                            <b>notice</b>
+                            <div class="description">
+                                <span>세종로 공영주차장 입차 70분 후부터
+                                    공연시간(4시간 한정/유료전시 2시간)
+                                    이내에 사전 정산을 하시면 공연 후
+                                    출차 시 서비스 시간을 적용 받으실 수 있습니다
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map_btn group">
+                        <a class="google_map" onmouseover="mouseover1()" onmouseleave="mouseleave1()">
+                            <p><img src="../imgs/location/location_google_color.png" alt="google_map_btn "></p>
+                            <span>구글 맵 열기</span>
+                        </a>
+                        <a class="kakao_map" onmouseover="mouseover2()" onmouseleave="mouseleave2()">
+                            <p><img src="../imgs/location/location_map_color.png" alt="kakao_app_btn"></p>
+                            <span>카카오 맵 열기 </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="guide_img group">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.1293548070894!2d126.97395881343029!3d37.57252527582744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2eb4d3089f9%3A0xdc83747259b1898d!2z7IS47KKF66y47ZmU7ZqM6rSA!5e0!3m2!1sko!2skr!4v1692850290908!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map_wrap">
+                        <div id="map" class="kmap"></div>
+                        <ul id="category">
+                            <li id="CE7" data-order="0">
+                                <span class="category_bg cafe"></span>
+                                카페
+                            </li>
+                            <li id="CS2" data-order="1">
+                                <span class="category_bg store"></span>
+                                편의점
+                            </li>
+                            <li id="PK6 " data-order="2">
+                                <span class="category_bg 
+                                oil"></span>
+                                주차장
+                            </li>
+                            <li id="FD6" data-order="3">
+                                <span class="category_bg food"></span>
+                                음식점
+                            </li>
+                            <li id="BK9" data-order="4">
+                                <span class="category_bg bank"></span>
+                                은행
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="traffic">
+                <figure class="alert group">
+                    <p><img src="../imgs/location/notice.png" alt="notice"></p>
+                    <figcaption>대중교통 정보는 변경될 수 있으니 포털사이트를 통해
+                        버스정류장 위치 및 운행정보를 반드시 확인하시기 바랍니다.</figcaption>
+                </figure>
+                <div class="public_transport">
+                    <div class="subway">
+                        <figure class="group">
+                            <p><img src="../imgs/location/subway.png" alt="subway"></p>
+                            <figcaption>지하철 이용</figcaption>
+                        </figure>
+                        <div class="subway_route group">
+                            <div>
+                                <p> 호선</p>
+                                <span><em>종각역</em> 하차 → <em>1번 출구</em>로 나와서 광화문 방향 350M 지점</span>
+                            </div>
+                            <div>
+                                <p> 호선</p>
+                                <span><em>광화문역</em> 하차 → <em>1번 8번 7번</em> 출구로 나와서
+                                    광화문 방향으로 200M 지점</span>
+                            </div>
+                            <div>
+                                <p> 호선</p>
+                                <span><em>경복궁역</em> 하차 → <em>6번 출구</em>에서 세종대로 방향</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bus group">
+                        <figure>
+                            <p><img src="../imgs/location/bus.png" alt="bus"></p>
+                            <figcaption>버스 이용</figcaption>
+                        </figure>
+                        <div class="bus_route">
+                            <div class="bus_way1 group">
+                                <b>세종문화회관</b>
+                                <p> 간선 / 401 · 406 · 700 · 704</p>
+                                <p> 지선 / 1711 · 7016 · 7018 · 7022 · 721</p>
+                                <p> 광역 / 5000A · 5000B · 5005 · 5500-2
+                                    9000 · 9000-1 · 92009401 · 970 · 9703</p>
+                                <p> 기타 / 종로09 · 종로11 · 6005</p>
+                            </div>
+                            <div class="bus_way2 group">
+                                <b>광화문(01120 가변)</b>
+                                <p> 간선 / 600 · 602</p>
+                                <p> 지선 / 7019</p>
+                                <p> 기타 / 790 · 799 · 1002
+                                    1004 · 9710 · 9710-1 · 8600 · 8601 · 8601A
+                                    9710 · 9709 · 9709A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

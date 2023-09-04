@@ -1,0 +1,214 @@
+@import url("../css/basic.css");
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .group {
+  opacity: 0;
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+main .group.mem {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+main .bg {
+  width: 100%;
+  height: 650px;
+  background: url("../imgs/season/Season_banner.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .bg h2 {
+  color: white;
+  font-size: 3rem;
+  font-family: "NotoSansKR-Medium";
+}
+
+main .bg hr {
+  width: 4.5625rem;
+  display: none;
+  margin: 1rem;
+}
+
+main .bg p {
+  color: #818181;
+  font-size: 1.25rem;
+  display: none;
+}
+
+main .Season_content {
+  width: 100%;
+}
+
+main .Season_content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10rem 10rem 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .Season_content ul li {
+  border-radius: 1.875rem;
+  border: 0px solid black;
+  -webkit-box-shadow: 1px 2px 20px 1px rgba(136, 136, 136, 0.513725);
+          box-shadow: 1px 2px 20px 1px rgba(136, 136, 136, 0.513725);
+  width: 20%;
+  height: 19.6875rem;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .Season_content ul li .bgimg {
+  height: 11.25rem;
+  border-bottom: 0px solid black;
+}
+
+main .Season_content ul li .bgimg img {
+  height: 100%;
+  width: 100%;
+}
+
+main .Season_content ul li .txtbox {
+  padding: 0px 2.5rem 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: .5rem;
+  gap: 1.25rem;
+  position: relative;
+}
+
+main .Season_content ul li .txtbox b {
+  z-index: 0;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+main .Season_content ul li .txtbox p {
+  font-size: 0.625rem;
+  color: #818181;
+}
+
+main .Season_content ul li .txtbox::before {
+  content: "";
+  position: absolute;
+  border-left: 0.1875rem solid #9988FF;
+  height: 1.5625rem;
+  top: 1.5rem;
+  left: 8%;
+  color: #9988FF;
+}
+
+main .Season_content ul li:hover {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+  cursor: pointer;
+}
+
+main .Season_content .column3 li:nth-of-type(4) {
+  opacity: 0;
+}
+
+main .page_turn {
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 10px;
+  margin: 5rem;
+}
+
+main .page_turn a span {
+  display: inline-block;
+  -webkit-transform: translateX(6px);
+          transform: translateX(6px);
+  height: 11px;
+}
+
+@media screen and (max-width: 1280px) {
+  main {
+    width: 100%;
+  }
+  main .bg {
+    height: 401px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    background-image: url("");
+  }
+  main .bg h2 {
+    color: black;
+  }
+  main .bg hr {
+    display: block;
+  }
+  main .bg p {
+    display: block;
+  }
+  main .Season_content {
+    width: 100%;
+  }
+  main .Season_content ul {
+    margin: 0rem 5rem;
+  }
+  main .Season_content ul li {
+    margin-top: 5rem;
+    width: 45%;
+  }
+}
+
+@media (max-width: 640px) {
+  main .Season_content {
+    width: 100%;
+  }
+  main .Season_content ul {
+    margin: 0rem 5rem;
+  }
+  main .Season_content ul li {
+    margin-top: 5rem;
+    width: 100%;
+  }
+  main .Season_content .column3 li:nth-of-type(4) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=season.css.map */
